@@ -1,36 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Appit
+
+Welcome to **Appit** – a next-gen fintech solution designed to tackle the everyday challenges in financial transactions and elevate your digital financial experience. Appit aims to solve critical issues such as transfer delays and offers a seamless user experience.
+
+## Features
+
+- **Fast Transfers**: Say goodbye to delayed transactions. Appit ensures timely and secure fund transfers, letting you focus on what matters.
+- **User-Friendly Experience**: With a focus on simplicity and reliability, Appit is designed to be intuitive for all users.
+- **Future Innovations**: Appit is continually evolving, with new features and improvements in the pipeline to address your needs and enhance the experience.
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Download**: Available on iOS and Android platforms soon.
+2. **Sign Up**: Create an account and start exploring.
+3. **Explore Features**: Access quick transfers, real-time balance updates, and a seamless, all-in-one financial experience.
