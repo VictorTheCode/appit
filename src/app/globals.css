@@ -43,6 +43,13 @@ body {
   font-family: Satoshi-Regular;
 }
 
+.fade-gradient {
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

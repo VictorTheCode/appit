@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FAQItemProps } from "@/interface/Faq";
-import { div } from "framer-motion/client";
 
 const FAQ = () => {
   const faqs = [
@@ -52,8 +51,10 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex flex-1 justify-between items-center w-full p-4 text-left text-white"
       >
-        <span className="font-medium text-2xl flex-1">{question}</span>
-        <div className=" text-3xl rounded-lg text-center px-2 border border-gray-800">
+        <span className=" text-[1.3rem] font-[satoshi-bold] flex-1">
+          {question}
+        </span>
+        <div className="my-[-3px]text-3xl rounded-lg text-center px-2 border border-gray-800">
           <motion.div
             initial={false}
             animate={{ rotate: isOpen ? 180 : 0 }}
@@ -65,7 +66,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="text-2xl font-bold"
+                className="text-2xl font-normal"
               >
                 <span>&minus;</span>
               </motion.span>
@@ -75,7 +76,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="text-2xl font-bold"
+                className="text-2xl font-normal"
               >
                 +
               </motion.span>
@@ -88,8 +89,8 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
-          transition={{ duration: 0.9 }}
-          className="px-4 pb-4 text-gray-400"
+          transition={{ duration: 0.05 }}
+          className="px-4 pb-4 text-lg text-gray-400"
         >
           {answer}
         </motion.div>
@@ -99,58 +100,3 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 };
 
 export default FAQ;
-
-// import {
-//   Accordion,
-//   AccordionContent,
-//   AccordionTrigger,
-//   AccordionItem,
-// } from "@/components/ui/accordion";
-
-// const FAQs = () => {
-//   return (
-//     <div>
-//       <div className="container">
-//         <header className="text-center">
-//           <h1 className="text-4xl font-bold">Frequently Asked Questions</h1>
-//           <p className="text-gray-600 mt-4">
-//             Here are some of our FAQs. If you have any other questions, please
-//             feel free to contact us.
-//           </p>
-//         </header>
-//         <section className="w-full max-w-lg">
-//           <h2 className="text-center text-2xl font-bold mb-4">
-//             Frequently Asked Questions
-//           </h2>
-//           <Accordion type="single" collapsible>
-//             <AccordionItem value="item 4">
-//               <AccordionTrigger>How do I create an account?</AccordionTrigger>
-//               <AccordionContent>
-//                 Sign up by providing your email and a password to get started
-//                 with Appit.
-//               </AccordionContent>
-//             </AccordionItem>
-//             <AccordionItem value="item 2">
-//               <AccordionTrigger>Can I customize my profile?</AccordionTrigger>
-//               <AccordionContent>
-//                 Yes, Appit allows you to personalize your profile with a photo,
-//                 bio, and interests to connect with others.
-//               </AccordionContent>
-//             </AccordionItem>
-//             <AccordionItem value="item 3">
-//               <AccordionTrigger>
-//                 Is Appit available on all devices?
-//               </AccordionTrigger>
-//               <AccordionContent>
-//                 Appit is compatible with most mobile and desktop devices.
-//               </AccordionContent>
-//             </AccordionItem>
-//             {/* Add more FAQs as needed */}
-//           </Accordion>
-//         </section>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FAQs;
