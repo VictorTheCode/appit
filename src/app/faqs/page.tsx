@@ -32,11 +32,17 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="text-white rounded-lg shadow-lg max-w-4xl mx-auto p-6">
-      <div className="flex flex-col items-center gap-5 ">
-        {faqs.map((faq, index) => (
-          <FAQItem key={index} question={faq.question} answer={faq.answer} />
-        ))}
+    <div className="py-9 min-w-[90%] mx-auto">
+      {/* <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2> */}
+      <h2 className="text-[4rem] w-full font-bold text-center mb-6">
+        Frequently Asked Questions
+      </h2>
+      <div className="text-white rounded-lg shadow-lg max-w-4xl mx-auto p-6">
+        <div className="flex flex-col items-center gap-5 ">
+          {faqs.map((faq, index) => (
+            <FAQItem key={index} question={faq.question} answer={faq.answer} />
+          ))}
+        </div>
       </div>
     </div>
   );

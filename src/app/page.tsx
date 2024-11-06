@@ -1,8 +1,14 @@
 "use client";
+import Benefits from "@/components/Benefits/Benefits";
+import Carousel from "@/components/Carousel/Carousel";
+import Features from "@/components/Features/Features";
+import Pricing from "@/components/Pricing/Pricing";
+import Testimonial from "@/components/Testimonial/Testimonial";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import FAQ from "./faqs/page";
 
 export default function Home() {
   const centerRef = useRef(null);
@@ -19,8 +25,8 @@ export default function Home() {
     });
   }, []);
   return (
-    <div className="container mx-auto text-white">
-      <div className="hero flex items-center flex-col justify-center gap-12 mt-12">
+    <div className="container flex flex-col items-center mx-auto text-white">
+      <div className="min-h-screen flex items-center flex-col justify-center gap-12 mt-12">
         <header className="flex flex-col justify-center items-center gap-5">
           <h1 className="text-[4rem] w-[70%] text-center leading-tight font-[satoshi-bold]">
             Connect, Share, and Grow with Appit Social
@@ -67,6 +73,29 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="hero flex flex-col items-center grad -space-y-7 justify-center">
+        <h2 className="text-xl text-center">
+          Trusted by 1000+ businesses across the world
+        </h2>
+        <div className="max-w-3xl flex justify-center items-center relative">
+          <Carousel />
+        </div>
+      </div>
+      <div className="mt-[7rem]">
+        <header className="flex flex-col gap-4">
+          {/* <Image /> */}
+          <h1 className="text-[3rem] max-w-[53rem] leading-tight text-center font-[satoshi] font-bold">
+            Empowering authentic connections for a vibrant social experience{" "}
+          </h1>
+        </header>
+        <div></div>
+      </div>
+
+      <Benefits />
+      <Features />
+      <Pricing />
+      <Testimonial />
+      <FAQ />
     </div>
   );
 }

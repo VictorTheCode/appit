@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
-import FAQs from "../Faq/page";
+import FAQs from "../faqs/page";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Countdown from "@/components/Countdown/Countdown";
+import { toast } from "@/hooks/use-toast";
+import { ToastAction } from "@/components/ui/toast";
 
 const Waitlist = () => {
   return (
@@ -24,6 +27,19 @@ const Waitlist = () => {
         />
         <Button
           type="submit"
+          onClick={() => {
+            toast({
+              title: "You've been added to the waitlist",
+              description: "We will notify you when we launch",
+              action: (
+                <ToastAction altText="Go to your email">
+                  <a href="mailto:victorokpaire14@outlook.com">
+                    Check your inbox
+                  </a>
+                </ToastAction>
+              ),
+            });
+          }}
           className="bg-white text-black py-5 hover:bg-white hover:text-black"
         >
           Join Waitlist
@@ -34,13 +50,7 @@ const Waitlist = () => {
       </p>
 
       <Countdown />
-      <div className="py-9 min-w-[90%] mx-auto">
-        {/* <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2> */}
-        <h2 className="text-[4rem] w-full font-bold text-center mb-6">
-          Frequently Asked Questions
-        </h2>
-        <FAQs />
-      </div>
+      <FAQs />
     </main>
   );
 };
