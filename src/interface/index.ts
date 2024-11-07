@@ -12,6 +12,6 @@ export interface FeatureProps {
 export interface TestimonialProps {
   name: string;
   title: string;
-  description: string;
+  quote: string;
   avatar: string;
 }

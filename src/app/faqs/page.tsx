@@ -33,7 +33,6 @@ const FAQ = () => {
 
   return (
     <div className="py-9 min-w-[90%] mx-auto">
-      {/* <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2> */}
       <h2 className="text-[4rem] w-full font-bold text-center mb-6">
         Frequently Asked Questions
       </h2>
